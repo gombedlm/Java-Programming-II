@@ -5,7 +5,7 @@ import java.nio.file.Path;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
-public class PersonReader {
+public class ProductReader {
     public static void main(String[] args) {
 
         JFileChooser chooser = new JFileChooser();
@@ -36,17 +36,17 @@ public class PersonReader {
 
                     // Print header once
                     if (line == 1) {
-                        System.out.println(String.format("%-10s %-15s %-15s %-10s %-5s",
-                                "ID", "First Name", "Last Name", "Title", "YOB"));
-                        System.out.println("-------------------------------------------------------------------");
+                        System.out.println(String.format("%-10s %-15s %-50s %-10s",
+                                "ID", "Name", "Description", "Cost"));
+                        System.out.println("-------------------------------------------------------------------------------");
                     }
 
                     // Split the record into fields
-                    String[] fields = rec.split(", ");
+                    String[] fields = rec.split(",");
 
                     // Print as table row
-                    System.out.println(String.format("%-10s %-15s %-15s %-10s %-5s",
-                            fields[0], fields[1], fields[2], fields[3], fields[4]));
+                    System.out.println(String.format("%-10s %-15s %-50s %-10s",
+                            fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim()));
                 }
                 reader.close();
                 System.out.println("\n\nData file read!");
@@ -63,4 +63,3 @@ public class PersonReader {
         }
     }
 }
-
