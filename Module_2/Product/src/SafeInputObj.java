@@ -1,30 +1,44 @@
+/**
+ * Author: Layken Gombeda
+ * Date: 2025-09-07
+ * Time: 02:45 PM
+ */
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
  * Object-oriented version of the SafeInput console helper library.
- * Contains an internal Scanner 'pipe' used by all methods.
+ * Provides validated input methods for Strings, ints, doubles, and yes/no confirmations.
+ * Uses an internal Scanner (pipe) for all input.
  */
 public class SafeInputObj {
-    private Scanner pipe;
+    private Scanner pipe; // Scanner instance for all methods
 
-    /** Default constructor: uses System.in */
+    /**
+     * Default constructor.
+     * Initializes the Scanner to System.in
+     */
     public SafeInputObj() {
         this.pipe = new Scanner(System.in);
     }
 
-    /** Constructor that accepts a Scanner (not required by lab to use) */
+    /**
+     * Alternate constructor.
+     * Allows a custom Scanner to be passed in.
+     * @param scanner The Scanner to use for input
+     */
     public SafeInputObj(Scanner scanner) {
         this.pipe = scanner;
     }
 
     /**
-     * Get a non-zero length string from the user.
-     * @param prompt message to display
-     * @return a non-empty String
+     * Get a non-zero length String from the user.
+     * @param prompt The input prompt to display
+     * @return A non-empty String
      */
     public String getNonZeroLenString(String prompt) {
-        String retString = "";
+        String retString;
         do {
             System.out.print("\n" + prompt + ": ");
             retString = pipe.nextLine();
@@ -34,8 +48,8 @@ public class SafeInputObj {
 
     /**
      * Get an int value from the user.
-     * @param prompt prompt to show
-     * @return int value entered
+     * @param prompt The input prompt to display
+     * @return A valid int value
      */
     public int getInt(String prompt) {
         int result = 0;
@@ -44,21 +58,22 @@ public class SafeInputObj {
             System.out.print(prompt + ": ");
             if (pipe.hasNextInt()) {
                 result = pipe.nextInt();
-                pipe.nextLine(); // clear newline
+                pipe.nextLine();
                 ok = true;
             } else {
-                pipe.nextLine(); // clear bad input
+                System.out.println("Invalid input. Please enter an integer.");
+                pipe.nextLine();
             }
         } while (!ok);
         return result;
     }
 
     /**
-     * Get an int within an inclusive range.
-     * @param prompt prompt to show
-     * @param low low (inclusive)
-     * @param high high (inclusive)
-     * @return int value in range
+     * Get an int value within a specific range.
+     * @param prompt The input prompt to display
+     * @param low The minimum acceptable value
+     * @param high The maximum acceptable value
+     * @return An int value between low and high (inclusive)
      */
     public int getRangedInt(String prompt, int low, int high) {
         int result = 0;
@@ -69,7 +84,11 @@ public class SafeInputObj {
                 result = pipe.nextInt();
                 pipe.nextLine();
                 ok = (result >= low && result <= high);
+                if (!ok) {
+                    System.out.println("Input must be between " + low + " and " + high + ".");
+                }
             } else {
+                System.out.println("Invalid input. Please enter an integer.");
                 pipe.nextLine();
             }
         } while (!ok);
@@ -77,9 +96,9 @@ public class SafeInputObj {
     }
 
     /**
-     * Get a double from the user.
-     * @param prompt prompt to show
-     * @return double value
+     * Get a double value from the user.
+     * @param prompt The input prompt to display
+     * @return A valid double value
      */
     public double getDouble(String prompt) {
         double result = 0.0;
@@ -91,6 +110,7 @@ public class SafeInputObj {
                 pipe.nextLine();
                 ok = true;
             } else {
+                System.out.println("Invalid input. Please enter a number.");
                 pipe.nextLine();
             }
         } while (!ok);
@@ -98,11 +118,11 @@ public class SafeInputObj {
     }
 
     /**
-     * Get a double within an inclusive range.
-     * @param prompt prompt to show
-     * @param low low (inclusive)
-     * @param high high (inclusive)
-     * @return double in range
+     * Get a double value within a specific range.
+     * @param prompt The input prompt to display
+     * @param low The minimum acceptable value
+     * @param high The maximum acceptable value
+     * @return A double value between low and high (inclusive)
      */
     public double getRangedDouble(String prompt, double low, double high) {
         double result = 0.0;
@@ -113,7 +133,11 @@ public class SafeInputObj {
                 result = pipe.nextDouble();
                 pipe.nextLine();
                 ok = (result >= low && result <= high);
+                if (!ok) {
+                    System.out.println("Input must be between " + low + " and " + high + ".");
+                }
             } else {
+                System.out.println("Invalid input. Please enter a number.");
                 pipe.nextLine();
             }
         } while (!ok);
@@ -121,35 +145,48 @@ public class SafeInputObj {
     }
 
     /**
-     * Get a string that matches a given regular expression.
-     * @param prompt prompt to show
-     * @param regEx the regex pattern the input must match
-     * @return a string matching the regex
+     * Get a String that matches a regular expression pattern.
+     * @param prompt The input prompt to display
+     * @param regEx The regular expression to validate against
+     * @return A String matching the regex
      */
     public String getRegExString(String prompt, String regEx) {
-        String result = "";
+        String result;
         boolean ok = false;
         do {
-            System.out.print(prompt + " (must match " + regEx + "): ");
+            System.out.print(prompt + " (must match pattern): ");
             result = pipe.nextLine();
             if (Pattern.matches(regEx, result)) {
                 ok = true;
+            } else {
+                System.out.println("Input does not match the required format.");
             }
         } while (!ok);
         return result;
     }
 
     /**
-     * Yes/No confirmation.
-     * @param prompt prompt to show
-     * @return true for yes, false for no
+     * Get a yes/no confirmation from the user.
+     * @param prompt The input prompt to display
+     * @return true if user enters Y/y, false if N/n
      */
     public boolean getYNConfirm(String prompt) {
-        String resp;
+        String response;
+        boolean ok = false;
+        boolean retVal = false;
         do {
             System.out.print(prompt + " [Y/N]: ");
-            resp = pipe.nextLine().trim().toUpperCase();
-        } while (!(resp.equals("Y") || resp.equals("N")));
-        return resp.equals("Y");
+            response = pipe.nextLine().trim().toUpperCase();
+            if (response.equals("Y")) {
+                ok = true;
+                retVal = true;
+            } else if (response.equals("N")) {
+                ok = true;
+                retVal = false;
+            } else {
+                System.out.println("Please enter Y or N.");
+            }
+        } while (!ok);
+        return retVal;
     }
 }

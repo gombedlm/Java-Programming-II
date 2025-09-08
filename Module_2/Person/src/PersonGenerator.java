@@ -1,3 +1,9 @@
+/**
+ * Author: Layken Gombeda
+ * Date: 2025-09-08
+ * Time: 12:43 AM
+ */
+
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,49 +1,72 @@
-import javax.swing.*;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 /**
- * Reads Person records from a CSV file chosen with JFileChooser
- * and prints them in a formatted table.
+ * Author: Layken Gombeda
+ * Date: 2025-09-08
+ * Time: 12:43 AM
  */
+
+import javax.swing.*;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+import static java.nio.file.StandardOpenOption.CREATE;
+
 public class PersonReader {
     public static void main(String[] args) {
+
         JFileChooser chooser = new JFileChooser();
-        ArrayList<Person> people = new ArrayList<>();
 
-        try {
-            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                File file = chooser.getSelectedFile();
-                try (Scanner inFile = new Scanner(file)) {
-                    while (inFile.hasNextLine()) {
-                        String line = inFile.nextLine();
-                        String[] parts = line.split(",");
-                        if (parts.length == 5) {
-                            String first = parts[0];
-                            String last = parts[1];
-                            String id = parts[2];
-                            String title = parts[3];
-                            int yob = Integer.parseInt(parts[4]);
-                            people.add(new Person(first, last, id, title, yob));
-                        }
+        File selectedFile;
+        String rec = "";
+
+        try
+        {
+            File workingDirectory = new File(System.getProperty("user.dir"));
+            chooser.setCurrentDirectory(workingDirectory);
+
+            if(chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
+            {
+                selectedFile = chooser.getSelectedFile();
+                Path file = selectedFile.toPath();
+
+                InputStream in =
+                        new BufferedInputStream(Files.newInputStream(file, CREATE));
+                BufferedReader reader =
+                        new BufferedReader(new InputStreamReader(in));
+
+                int line = 0;
+                while(reader.ready())
+                {
+                    rec = reader.readLine();
+                    line++;
+
+                    // Print header once
+                    if (line == 1) {
+                        System.out.println(String.format("%-10s %-15s %-15s %-10s %-5s",
+                                "ID", "First Name", "Last Name", "Title", "YOB"));
+                        System.out.println("-------------------------------------------------------------------");
                     }
+
+                    // Split the record into fields
+                    String[] fields = rec.split(", ");
+
+                    // Print as table row
+                    System.out.println(String.format("%-10s %-15s %-15s %-10s %-5s",
+                            fields[0], fields[1], fields[2], fields[3], fields[4]));
                 }
+                reader.close();
+                System.out.println("\n\nData file read!");
             }
-        } catch (Exception e) {
-            System.out.println("Error reading file: " + e.getMessage());
         }
-
-        // Print table header
-        System.out.printf("%-10s %-10s %-8s %-6s %-4s%n",
-                "First", "Last", "ID", "Title", "YOB");
-        System.out.println("-------------------------------------------------");
-
-        // Print each Person
-        for (Person p : people) {
-            System.out.printf("%-10s %-10s %-8s %-6s %-4d%n",
-                    p.getFirstName(), p.getLastName(), p.getID(),
-                    p.getTitle(), p.getYOB());
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File not found!!!");
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
         }
     }
 }
+

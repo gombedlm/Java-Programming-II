@@ -1,47 +1,71 @@
-import javax.swing.*;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 /**
- * Reads Product records from a CSV file chosen with JFileChooser
- * and prints them in a formatted table.
+ * Author: Layken Gombeda
+ * Date: 2025-09-08
+ * Time: 12:43 AM
  */
+
+import javax.swing.*;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+import static java.nio.file.StandardOpenOption.CREATE;
+
 public class ProductReader {
     public static void main(String[] args) {
+
         JFileChooser chooser = new JFileChooser();
-        ArrayList<Product> products = new ArrayList<>();
 
-        try {
-            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                File file = chooser.getSelectedFile();
-                try (Scanner inFile = new Scanner(file)) {
-                    while (inFile.hasNextLine()) {
-                        String line = inFile.nextLine();
-                        String[] parts = line.split(",");
-                        if (parts.length == 4) {
-                            String name = parts[0];
-                            String desc = parts[1];
-                            String id = parts[2];
-                            double cost = Double.parseDouble(parts[3]);
-                            products.add(new Product(name, desc, id, cost));
-                        }
+        File selectedFile;
+        String rec = "";
+
+        try
+        {
+            File workingDirectory = new File(System.getProperty("user.dir"));
+            chooser.setCurrentDirectory(workingDirectory);
+
+            if(chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
+            {
+                selectedFile = chooser.getSelectedFile();
+                Path file = selectedFile.toPath();
+
+                InputStream in =
+                        new BufferedInputStream(Files.newInputStream(file, CREATE));
+                BufferedReader reader =
+                        new BufferedReader(new InputStreamReader(in));
+
+                int line = 0;
+                while(reader.ready())
+                {
+                    rec = reader.readLine();
+                    line++;
+
+                    // Print header once
+                    if (line == 1) {
+                        System.out.println(String.format("%-10s %-15s %-50s %-10s",
+                                "ID", "Name", "Description", "Cost"));
+                        System.out.println("-------------------------------------------------------------------------------");
                     }
+
+                    // Split the record into fields
+                    String[] fields = rec.split(",");
+
+                    // Print as table row
+                    System.out.println(String.format("%-10s %-15s %-50s %-10s",
+                            fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim()));
                 }
+                reader.close();
+                System.out.println("\n\nData file read!");
             }
-        } catch (Exception e) {
-            System.out.println("Error reading file: " + e.getMessage());
         }
-
-        // Print table header
-        System.out.printf("%-15s %-20s %-10s %-10s%n",
-                "Name", "Description", "ID", "Cost");
-        System.out.println("--------------------------------------------------------------");
-
-        // Print each Product
-        for (Product p : products) {
-            System.out.printf("%-15s %-20s %-10s %-10.2f%n",
-                    p.getName(), p.getDescription(), p.getID(), p.getCost());
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File not found!!!");
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
         }
     }
 }

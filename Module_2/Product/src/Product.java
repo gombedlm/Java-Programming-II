@@ -1,4 +1,10 @@
 /**
+ * Author: Layken Gombeda
+ * Date: 2025-09-08
+ * Time: 12:43 AM
+ */
+
+/**
  * Represents a Product with identifying information.
  */
 public class Product {
