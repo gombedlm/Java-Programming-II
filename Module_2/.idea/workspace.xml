@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ea817e5-75b3-4085-b9aa-91094887db6c" name="Changes" comment="" />
+    <list default="true" id="3ea817e5-75b3-4085-b9aa-91094887db6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Person/src/SafeInputObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Product/src/ProductGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Product/src/ProductReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Product/src/ProductTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Product/src/SafeInputObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/src/PersonGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/src/PersonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/src/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/src/SafeInput.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +58,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.PersonGenerator.executor": "Run",
+    "Application.PersonReader.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.PersonTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -61,7 +76,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "onboarding.tips.debug.path": "C:/Users/Layken/OneDrive - University of Cincinnati/School/Java Programming II/Module_2/Product/src/Main.java",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -71,14 +87,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Layken\OneDrive - University of Cincinnati\School\Java Programming II\Module_2\Person\src" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
-      </set>
-    </attachedChunks>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1757281112826</updated>
       <workItem from="1757281114171" duration="4594000" />
+      <workItem from="1757286680294" duration="4000" />
     </task>
     <servers />
   </component>

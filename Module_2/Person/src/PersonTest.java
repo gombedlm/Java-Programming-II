@@ -4,24 +4,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * JUnit tests for the Person class.
- * Tests constructors, setters, and special methods.
- * Does not test simple getters (per assignment instructions).
+ * Tests constructor, setters, and special methods.
+ * Does not test simple getters (per instructions).
  */
 class PersonTest {
     private Person p;
 
     @BeforeEach
     void setUp() {
-        // This runs before each test, creating a new Person object
         p = new Person("John", "Doe", "12345", "Mr.", 1990);
     }
 
     @Test
     void testConstructor() {
-        // Constructor should correctly assign values
         assertEquals("John Doe", p.fullName());
         assertEquals("Mr. John Doe", p.formalName());
-        assertEquals("12345", p.getID());  // ID should never change
+        assertEquals("12345", p.getID());
+        assertEquals(1990, p.getYOB());
     }
 
     @Test
@@ -45,35 +44,30 @@ class PersonTest {
     @Test
     void testSetValidYOB() {
         p.setYOB(2000);
-        assertEquals("2000", String.valueOf(p.getYOB()));
+        assertEquals(2000, p.getYOB());
     }
 
     @Test
     void testSetInvalidYOBTooEarly() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            p.setYOB(1930);
-        });
-        assertEquals("Year of Birth must be between 1940 and 2010", exception.getMessage());
+        Exception e = assertThrows(IllegalArgumentException.class, () -> p.setYOB(1930));
+        assertEquals("Year of Birth must be between 1940 and 2010", e.getMessage());
     }
 
     @Test
     void testSetInvalidYOBTooLate() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            p.setYOB(2020);
-        });
-        assertEquals("Year of Birth must be between 1940 and 2010", exception.getMessage());
+        Exception e = assertThrows(IllegalArgumentException.class, () -> p.setYOB(2020));
+        assertEquals("Year of Birth must be between 1940 and 2010", e.getMessage());
     }
 
     @Test
     void testGetAgeCurrentYear() {
         int currentYear = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
-        int expectedAge = currentYear - 1990;
-        assertEquals(String.valueOf(expectedAge), p.getAge());
+        assertEquals(String.valueOf(currentYear - 1990), p.getAge());
     }
 
     @Test
     void testGetAgeSpecificYear() {
-        assertEquals("30", p.getAge(2020)); // 2020 - 1990 = 30
+        assertEquals("30", p.getAge(2020));
     }
 
     @Test
