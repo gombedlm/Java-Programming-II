@@ -5,68 +5,47 @@
  */
 
 import javax.swing.*;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
-import static java.nio.file.StandardOpenOption.CREATE;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PersonReader {
     public static void main(String[] args) {
-
         JFileChooser chooser = new JFileChooser();
+        ArrayList<Person> people = new ArrayList<>();
 
-        File selectedFile;
-        String rec = "";
+        try {
+            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                File file = chooser.getSelectedFile();
+                Scanner scanner = new Scanner(file);
 
-        try
-        {
-            File workingDirectory = new File(System.getProperty("user.dir"));
-            chooser.setCurrentDirectory(workingDirectory);
+                while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
+                    String[] fields = line.split(",");
 
-            if(chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
-            {
-                selectedFile = chooser.getSelectedFile();
-                Path file = selectedFile.toPath();
+                    if (fields.length == 5) {
+                        String first = fields[0];
+                        String last = fields[1];
+                        String id = fields[2];
+                        String title = fields[3];
+                        int yob = Integer.parseInt(fields[4]);
 
-                InputStream in =
-                        new BufferedInputStream(Files.newInputStream(file, CREATE));
-                BufferedReader reader =
-                        new BufferedReader(new InputStreamReader(in));
-
-                int line = 0;
-                while(reader.ready())
-                {
-                    rec = reader.readLine();
-                    line++;
-
-                    // Print header once
-                    if (line == 1) {
-                        System.out.println(String.format("%-10s %-15s %-15s %-10s %-5s",
-                                "ID", "First Name", "Last Name", "Title", "YOB"));
-                        System.out.println("-------------------------------------------------------------------");
+                        people.add(new Person(first, last, id, title, yob));
                     }
-
-                    // Split the record into fields
-                    String[] fields = rec.split(", ");
-
-                    // Print as table row
-                    System.out.println(String.format("%-10s %-15s %-15s %-10s %-5s",
-                            fields[0], fields[1], fields[2], fields[3], fields[4]));
                 }
-                reader.close();
-                System.out.println("\n\nData file read!");
+                scanner.close();
             }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
         }
-        catch (FileNotFoundException e)
-        {
-            System.out.println("File not found!!!");
-            e.printStackTrace();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
+
+        // Print formatted table
+        System.out.printf("%-10s %-15s %-15s %-10s %-5s%n", "ID", "First Name", "Last Name", "Title", "YOB");
+        System.out.println("-------------------------------------------------------------------");
+        for (Person p : people) {
+            System.out.printf("%-10s %-15s %-15s %-10s %-5d%n",
+                    p.getID(), p.getFirstName(), p.getLastName(), p.getTitle(), p.getYOB());
         }
     }
 }
-

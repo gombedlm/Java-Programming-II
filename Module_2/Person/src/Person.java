@@ -4,15 +4,14 @@
  * Time: 12:43 AM
  */
 
-/**
- * Represents a Person with identifying information.
- */
+import java.util.Calendar;
+
 public class Person {
     private String firstName;
     private String lastName;
-    private String ID;     // should never change
+    private final String ID;
     private String title;
-    private int YOB;       // Year of birth (1940–2010)
+    private int YOB;
 
     public Person(String firstName, String lastName, String ID, String title, int YOB) {
         this.firstName = firstName;
@@ -51,7 +50,7 @@ public class Person {
     }
 
     public String getAge() {
-        int currentYear = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         return String.valueOf(currentYear - this.YOB);
     }
 
@@ -59,6 +58,7 @@ public class Person {
         return String.valueOf(year - this.YOB);
     }
 
+    // ✅ Fixed: now uses commas
     public String toCSV() {
         return firstName + "," + lastName + "," + ID + "," + title + "," + YOB;
     }

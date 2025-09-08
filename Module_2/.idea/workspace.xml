@@ -5,24 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea817e5-75b3-4085-b9aa-91094887db6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SafeInputObj/SafeInputObj.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SafeInputObj/src/SafeInputTestDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/.idea/libraries/junit_jupiter.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Person/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Person/src/PersonGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Person/src/PersonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/src/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/src/SafeInputObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/SafeInputObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonData.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Product/src/ProductGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/ProductGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Product/src/ProductReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/ProductReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/src/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/ProductTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/src/SafeInputObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/SafeInputObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/Person/production/Person/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/SafeInputObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/Person/production/Person/SafeInputObj.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/SafeInputObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/ProductGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/ProductReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/ProductTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/SafeInputObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/SafeInputObj/SafeInputObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/SafeInputObj/SafeInputTestDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PersonGenerator/NIOWriteTextFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PersonGenerator/PersonGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PersonGenerator/SafeInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/NIOReadTextFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/PersonReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/SafeInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/personData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProductGenerator/ProductGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProductGenerator/SafeInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProductGenerator/productData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProductReader/ProductReader.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +84,13 @@
   "keyToString": {
     "Application.PersonGenerator.executor": "Run",
     "Application.PersonReader.executor": "Run",
+    "Application.ProductGenerator.executor": "Run",
+    "Application.ProductReader.executor": "Run",
     "Application.SafeInputTestDriver.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.PersonTest.executor": "Run",
     "JUnit.ProductTest.executor": "Run",
+    "JUnit.Whole project.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -86,7 +107,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Layken/OneDrive - University of Cincinnati/School/Java Programming II/Module_2/SafeInputObj/src/Main.java",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -100,29 +121,49 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonTest">
-    <configuration name="PersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.SafeInputTestDriver">
+    <configuration name="PersonGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PersonGenerator" />
       <module name="Person" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PersonTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PersonReader" />
+      <module name="Person" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProductGenerator" />
       <module name="Product" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProductTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProductReader" />
+      <module name="Product" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SafeInputTestDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SafeInputTestDriver" />
+      <module name="SafeInputObj" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PersonTest" />
-        <item itemvalue="JUnit.ProductTest" />
+        <item itemvalue="Application.SafeInputTestDriver" />
+        <item itemvalue="Application.ProductReader" />
+        <item itemvalue="Application.ProductGenerator" />
+        <item itemvalue="Application.PersonReader" />
+        <item itemvalue="Application.PersonGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -140,5 +181,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

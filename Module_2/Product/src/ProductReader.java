@@ -5,67 +5,46 @@
  */
 
 import javax.swing.*;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
-import static java.nio.file.StandardOpenOption.CREATE;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ProductReader {
     public static void main(String[] args) {
-
         JFileChooser chooser = new JFileChooser();
+        ArrayList<Product> products = new ArrayList<>();
 
-        File selectedFile;
-        String rec = "";
+        try {
+            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                File file = chooser.getSelectedFile();
+                Scanner scanner = new Scanner(file);
 
-        try
-        {
-            File workingDirectory = new File(System.getProperty("user.dir"));
-            chooser.setCurrentDirectory(workingDirectory);
+                while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
+                    String[] fields = line.split(",");
 
-            if(chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
-            {
-                selectedFile = chooser.getSelectedFile();
-                Path file = selectedFile.toPath();
+                    if (fields.length == 4) {   // ✅ safety check
+                        String name = fields[0];
+                        String description = fields[1];
+                        String id = fields[2];
+                        double cost = Double.parseDouble(fields[3]);
 
-                InputStream in =
-                        new BufferedInputStream(Files.newInputStream(file, CREATE));
-                BufferedReader reader =
-                        new BufferedReader(new InputStreamReader(in));
-
-                int line = 0;
-                while(reader.ready())
-                {
-                    rec = reader.readLine();
-                    line++;
-
-                    // Print header once
-                    if (line == 1) {
-                        System.out.println(String.format("%-10s %-15s %-50s %-10s",
-                                "ID", "Name", "Description", "Cost"));
-                        System.out.println("-------------------------------------------------------------------------------");
+                        products.add(new Product(name, description, id, cost));
                     }
-
-                    // Split the record into fields
-                    String[] fields = rec.split(",");
-
-                    // Print as table row
-                    System.out.println(String.format("%-10s %-15s %-50s %-10s",
-                            fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim()));
                 }
-                reader.close();
-                System.out.println("\n\nData file read!");
+                scanner.close();
             }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
         }
-        catch (FileNotFoundException e)
-        {
-            System.out.println("File not found!!!");
-            e.printStackTrace();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
+
+        // Print formatted table
+        System.out.printf("%-10s %-20s %-25s %-10s%n", "ID", "Name", "Description", "Cost");
+        System.out.println("-----------------------------------------------------------------------");
+        for (Product p : products) {
+            System.out.printf("%-10s %-20s %-25s %-10.2f%n",
+                    p.getID(), p.getName(), p.getDescription(), p.getCost());
         }
     }
 }

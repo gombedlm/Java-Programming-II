@@ -6,16 +6,10 @@
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-/**
- * Collects Person records using SafeInputObj,
- * stores them in an ArrayList, and writes to a CSV file.
- */
 public class PersonGenerator {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        SafeInputObj input = new SafeInputObj(in);   // create an instance of SafeInputObj
+        SafeInputObj input = new SafeInputObj();
         ArrayList<Person> people = new ArrayList<>();
         boolean more = true;
 
