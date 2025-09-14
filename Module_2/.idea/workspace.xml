@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ea817e5-75b3-4085-b9aa-91094887db6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/.idea/libraries/junit_jupiter.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/src/PersonGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person/src/PersonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person/src/PersonReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonData.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/src/ProductGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/ProductGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/src/ProductReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/ProductReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/PersonTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Person/SafeInputObj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/ProductGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/ProductReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/ProductTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/Product/SafeInputObj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/SafeInputObj/SafeInputObj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Person/production/SafeInputObj/SafeInputTestDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/PersonGenerator/NIOWriteTextFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/PersonGenerator/PersonGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/PersonGenerator/SafeInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/NIOReadTextFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/PersonReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/SafeInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/PersonReader/personData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/ProductGenerator/ProductGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/ProductGenerator/SafeInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/ProductGenerator/productData.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/ProductReader/ProductReader.class" beforeDir="false" />
-    </list>
+    <list default="true" id="3ea817e5-75b3-4085-b9aa-91094887db6c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,39 +43,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.PersonGenerator.executor": "Run",
-    "Application.PersonReader.executor": "Run",
-    "Application.ProductGenerator.executor": "Run",
-    "Application.ProductReader.executor": "Run",
-    "Application.SafeInputTestDriver.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.PersonTest.executor": "Run",
-    "JUnit.ProductTest.executor": "Run",
-    "JUnit.Whole project.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Layken/OneDrive - University of Cincinnati/School/Java Programming II/Module_2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Layken/OneDrive - University of Cincinnati/School/Java Programming II/Module_2/SafeInputObj/src/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.PersonGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PersonReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SafeInputTestDriver.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.PersonTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Whole project.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Layken/OneDrive - University of Cincinnati/School/Java Programming II/Module_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Layken/OneDrive - University of Cincinnati/School/Java Programming II/Module_2/SafeInputObj/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Layken\OneDrive - University of Cincinnati\School\Java Programming II\Module_2\Person\src" />
@@ -121,7 +85,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SafeInputTestDriver">
+  <component name="RunManager" selected="Application.ProductGenerator">
     <configuration name="PersonGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PersonGenerator" />
       <module name="Person" />
@@ -176,6 +140,7 @@
       <updated>1757281112826</updated>
       <workItem from="1757281114171" duration="4594000" />
       <workItem from="1757286680294" duration="4000" />
+      <workItem from="1757557793321" duration="1464000" />
     </task>
     <servers />
   </component>
@@ -191,5 +156,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

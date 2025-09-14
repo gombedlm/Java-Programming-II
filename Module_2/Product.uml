@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/Layken/OneDrive - University of Cincinnati/School/Java Programming II/Module_2/Product</OriginalElement>
+  <nodes>
+    <node x="110.74971941638614" y="207.75701459034795">ProductReader</node>
+    <node x="-143.53423120089792" y="207.75701459034795">ProductGenerator</node>
+    <node x="374.65179573512887" y="446.00000000000006">ProductTest</node>
+    <node x="-93.5" y="409.0">Product</node>
+    <node x="-104.35129068462402" y="-161.4859708193041">SafeInputObj</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Compact" zoom="0.7376972833117725" showDependencies="false" x="204.65495230078557" y="327.5855429292928" />
+  <SelectedNodes>
+    <node>ProductTest</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
