@@ -1,0 +1,3 @@
+The quick brown fox jumps over the lazy dog.
+Hi there! Can you see me run so fast?
+This file has a mix of longword and tiny ones.
